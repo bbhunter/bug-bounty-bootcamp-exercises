@@ -1,0 +1,32 @@
+# Dirsearch started Wed Sep  1 10:19:02 2021 as: /Users/uribarranco/Documents/Hacking/tools/dirsearch/dirsearch.py -u scanme.nmap.org -e php --format plain -o scanme.nmap.org_recon/dirsearch.txt
+
+403   293B   http://scanme.nmap.org:80/.ht_wsr.txt
+403   296B   http://scanme.nmap.org:80/.htaccess.bak1
+403   296B   http://scanme.nmap.org:80/.htaccess.orig
+403   298B   http://scanme.nmap.org:80/.htaccess.sample
+403   296B   http://scanme.nmap.org:80/.htaccess.save
+403   296B   http://scanme.nmap.org:80/.htaccess_orig
+403   297B   http://scanme.nmap.org:80/.htaccess_extra
+403   294B   http://scanme.nmap.org:80/.htaccessOLD
+403   295B   http://scanme.nmap.org:80/.htaccessOLD2
+403   294B   http://scanme.nmap.org:80/.htaccess_sc
+403   294B   http://scanme.nmap.org:80/.htaccessBAK
+403   287B   http://scanme.nmap.org:80/.html
+403   286B   http://scanme.nmap.org:80/.htm
+403   296B   http://scanme.nmap.org:80/.htpasswd_test
+403   292B   http://scanme.nmap.org:80/.htpasswds
+403   293B   http://scanme.nmap.org:80/.httr-oauth
+403   315B   http://scanme.nmap.org:80/.svn/text-base/index.php.svn-base
+403   292B   http://scanme.nmap.org:80/.svn/wc.db
+403   298B   http://scanme.nmap.org:80/.svn/all-wcprops
+403   297B   http://scanme.nmap.org:80/.svn/text-base/
+403   294B   http://scanme.nmap.org:80/.svn/entries
+403   287B   http://scanme.nmap.org:80/.svn/
+301   316B   http://scanme.nmap.org:80/.svn    -> REDIRECTS TO: http://scanme.nmap.org/.svn/
+200   947B   http://scanme.nmap.org:80/images/
+301   318B   http://scanme.nmap.org:80/images    -> REDIRECTS TO: http://scanme.nmap.org/images/
+200     7KB  http://scanme.nmap.org:80/index
+200     7KB  http://scanme.nmap.org:80/index.html
+403   295B   http://scanme.nmap.org:80/server-status
+403   296B   http://scanme.nmap.org:80/server-status/
+301   318B   http://scanme.nmap.org:80/shared    -> REDIRECTS TO: http://scanme.nmap.org/shared/
