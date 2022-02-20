@@ -1,32 +1,38 @@
-# Dirsearch started Wed Sep  1 10:19:02 2021 as: /Users/uribarranco/Documents/Hacking/tools/dirsearch/dirsearch.py -u scanme.nmap.org -e php --format plain -o scanme.nmap.org_recon/dirsearch.txt
+Este escaneo ha sido iniciado mar 15 feb 2022 09:55:27 CST
+Resultado de Nmap:
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+9929/tcp  open  nping-echo
+31337/tcp open  Elite
+Resultados deDirsearch:
+# Dirsearch started Tue Feb 15 09:53:55 2022 as: /usr/local/bin/dirsearch -u scanme.nmap.org --format plain -o scanme.nmap.org_recon/dirsearch
 
 403   293B   http://scanme.nmap.org:80/.ht_wsr.txt
 403   296B   http://scanme.nmap.org:80/.htaccess.bak1
 403   296B   http://scanme.nmap.org:80/.htaccess.orig
 403   298B   http://scanme.nmap.org:80/.htaccess.sample
 403   296B   http://scanme.nmap.org:80/.htaccess.save
-403   296B   http://scanme.nmap.org:80/.htaccess_orig
 403   297B   http://scanme.nmap.org:80/.htaccess_extra
+403   294B   http://scanme.nmap.org:80/.htaccess_sc
+403   296B   http://scanme.nmap.org:80/.htaccess_orig
+403   294B   http://scanme.nmap.org:80/.htaccessBAK
 403   294B   http://scanme.nmap.org:80/.htaccessOLD
 403   295B   http://scanme.nmap.org:80/.htaccessOLD2
-403   294B   http://scanme.nmap.org:80/.htaccess_sc
-403   294B   http://scanme.nmap.org:80/.htaccessBAK
-403   287B   http://scanme.nmap.org:80/.html
 403   286B   http://scanme.nmap.org:80/.htm
 403   296B   http://scanme.nmap.org:80/.htpasswd_test
 403   292B   http://scanme.nmap.org:80/.htpasswds
 403   293B   http://scanme.nmap.org:80/.httr-oauth
-403   315B   http://scanme.nmap.org:80/.svn/text-base/index.php.svn-base
-403   292B   http://scanme.nmap.org:80/.svn/wc.db
+403   287B   http://scanme.nmap.org:80/.html
 403   298B   http://scanme.nmap.org:80/.svn/all-wcprops
-403   297B   http://scanme.nmap.org:80/.svn/text-base/
 403   294B   http://scanme.nmap.org:80/.svn/entries
+403   297B   http://scanme.nmap.org:80/.svn/text-base/
 403   287B   http://scanme.nmap.org:80/.svn/
+403   315B   http://scanme.nmap.org:80/.svn/text-base/index.php.svn-base
 301   316B   http://scanme.nmap.org:80/.svn    -> REDIRECTS TO: http://scanme.nmap.org/.svn/
+403   292B   http://scanme.nmap.org:80/.svn/wc.db
+400   306B   http://scanme.nmap.org:80/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 200   947B   http://scanme.nmap.org:80/images/
 301   318B   http://scanme.nmap.org:80/images    -> REDIRECTS TO: http://scanme.nmap.org/images/
-200     7KB  http://scanme.nmap.org:80/index
 200     7KB  http://scanme.nmap.org:80/index.html
-403   295B   http://scanme.nmap.org:80/server-status
-403   296B   http://scanme.nmap.org:80/server-status/
-301   318B   http://scanme.nmap.org:80/shared    -> REDIRECTS TO: http://scanme.nmap.org/shared/
+200     7KB  http://scanme.nmap.org:80/index

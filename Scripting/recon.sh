@@ -1,8 +1,7 @@
 #!/bin/bash
 source ./scan.lib
 
-while getopts "m:i" OPTION; 
-do
+while getopts "m:i" OPTION; do
     case $OPTION in
         m)
             MODE=$OPTARG
@@ -14,19 +13,19 @@ do
 done
 
 scan_domain(){
+
     DOMAIN=$1
     DIRECTORY=${DOMAIN}_recon
-    echo "Creating directory $DIRECTORY."
+    echo "Creando la carpeta $DIRECTORY"
     mkdir $DIRECTORY
-
     case $MODE in
-        nmap_only)
+        namp-only)
             nmap_scan
             ;;
-        dirsearch_only)
+        dirsearch-only)
             dirsearch_scan
             ;;
-        crt_only)
+        crt-only)
             crt_scan
             ;;
         *)
@@ -40,19 +39,19 @@ scan_domain(){
 report_domain(){
     DOMAIN=$1
     DIRECTORY=${DOMAIN}_recon
-    echo "Generating recon report for $DOMAIN..."
+    echo "Generando reporte de $DOMAIN..."
     TODAY=$(date)
-    echo "This scan was created on $TODAY" > $DIRECTORY/report
-    if [ -f $DIRECTORY/nmap ]; then
-        echo "Results for Nmap:" >> $DIRECTORY/report
+    echo "Este escaneo ha sido iniciado $TODAY" > $DIRECTORY/report
+        if [ -f $DIRECTORY/nmap ]; then
+        echo "Resultado de Nmap:" >> $DIRECTORY/report
         grep -E "^\s*\S+\s+\S+\s+\S+\s*$" $DIRECTORY/nmap >> $DIRECTORY/report
     fi
-    if [ -f $DIRECTORY/dirsearch ]; then
-        echo "Results for Dirsearch:" >> $DIRECTORY/report
+        if [ -f $DIRECTORY/dirsearch ]; then
+        echo "Resultados deDirsearch:" >> $DIRECTORY/report
         cat $DIRECTORY/dirsearch >> $DIRECTORY/report
     fi
-    if [ -f $DIRECTORY/crt ]; then
-        echo "Results for crt.sh:" >> $DIRECTORY/report
+        if [ -f $DIRECTORY/crt ]; then
+        echo "Resultados de crt.sh:" >> $DIRECTORY/report
         jq -r ".[] | .name_value" $DIRECTORY/crt >> $DIRECTORY/report
     fi
 }
@@ -60,16 +59,20 @@ report_domain(){
 if [ $INTERACTIVE ]; then
     INPUT="BLANK"
     while [ $INPUT != "quit" ]; do
-        echo "Please enter a domain!"
+        echo "Porfavor Escriba el Dominio!"
         read INPUT
         if [ $INPUT != "quit" ]; then
             scan_domain $INPUT
             report_domain $INPUT
         fi
     done
-else
+else 
     for i in "${@:$OPTIND:$#}"; do
         scan_domain $i
         report_domain $i
     done
 fi
+
+    
+
+    

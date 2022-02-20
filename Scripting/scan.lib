@@ -1,15 +1,19 @@
 #!/bin/bash
-nmap_scan(){
+
+nmap_scan()
+{
     nmap $DOMAIN > $DIRECTORY/nmap
-    echo "The results of nmap scan are stored in $DIRECTORY/nmap."
+    echo "Los resultados del escaneo de nmap se han guardado en $DIRECTORY/nmap."
 }
 
-dirsearch_scan(){
-    dirsearch.py -u $DOMAIN -e php --format plain -o $DIRECTORY/dirsearch
-    echo "The results of dirsearch scan are stored in $DIRECTORY/dirsearch."
+dirsearch_scan()
+{
+    dirsearch -u $DOMAIN --format plain -o $DIRECTORY/dirsearch
+    echo "Los resultados del escaneo de dirsearch se han guardado en $DIRECTORY/dirsearch."
 }
 
-crt_scan(){
+crt_scan()
+{
     curl "https://crt.sh/?q=$DOMAIN&output=json" -o $DIRECTORY/crt
-    echo "The results of cert parsing is stored in $DIRECTORY/crt"
+    echo "Los resultados de la búsqueda de certificados se ha guardado en $DIRECTORY/crt."
 }
